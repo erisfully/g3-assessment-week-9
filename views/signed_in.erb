@@ -25,8 +25,11 @@
     <h2>ToDo List</h2>
     <ul class="todos">
       <% todos.each do |todo| %>
-          <li><%= todo.body %></li>
+          <li><%= todo.body %>
+            <a href="todo/edit/<%= todo["id"]%>"><button>Edit</button></a>
+              </li>
       <% end %>
     </ul>
+    <
   </div>
 </div>
