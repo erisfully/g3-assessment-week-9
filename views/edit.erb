@@ -1,4 +1,3 @@
-<p>Edit message:</p>
   <form action="/edit/<%= todo["id"] %>" method="post">
     <input type="text" name="todo" id="todo" value="<%= todo["body"] %>"/>
     <input type="hidden" name="_method" value="patch"/>

@@ -25,5 +25,10 @@ feature "ToDos" do
     within ".todos" do
       expect(page).to have_content "Get a haircut"
     end
+
+    click_button "Edit"
+    # save_and_open_page
+    # expect(page).to have_field("todo", with: "Get a haircut")
+    # fill_in "todo", with: "Call stylist"
   end
 end

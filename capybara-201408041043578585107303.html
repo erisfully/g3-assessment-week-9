@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDos</title>
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <link rel="stylesheet" href="bootstrap-theme.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div id="container">
+  
+      <p class="flash bg-success">ToDo added</p>
+  
+
+  <div id="header">
+  <p>Welcome, hunta</p>
+
+  <form action="/sessions" method="post">
+    <input type="hidden" name="_method" value="delete"/>
+    <input type="submit" value="Sign Out" class="btn btn-link"/>
+  </form>
+</div>
+
+<div class="row">
+  <div class="col-lg-4" id="new_todo_form">
+    <form method="post" action="/todos">
+      <ul>
+        <li>
+          <label for="body">What do you need to do?</label>
+          <input type="text" name="body" id="body" class="form-control"/>
+        </li>
+        <li>
+          <input type="submit" value="Add ToDo" class="btn btn-success"/>
+        </li>
+      </ul>
+    </form>
+  </div>
+  <div class="col-lg-8">
+    <h2>ToDo List</h2>
+    <ul class="todos">
+      
+          <li>Get a haircut
+            <a href="todo/edit/1"><button>Edit</button></a>
+            <form method="post" action="/delete/1">
+              <input type="hidden" name="_method" value="delete" />
+              <input type="submit" value="Complete"/>
+            </form>
+              </li>
+      
+    </ul>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
