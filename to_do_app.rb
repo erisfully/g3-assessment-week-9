@@ -19,7 +19,7 @@ class ToDoApp < Sinatra::Application
       user = current_user
 
       users = User.where("id != #{user.id}")
-      todos = ToDoItem.all
+      todos = ToDoItem.where("user_id = #{user.id}")
       p todos
       erb :signed_in, locals: {current_user: user, users: users, todos: todos}
     else
